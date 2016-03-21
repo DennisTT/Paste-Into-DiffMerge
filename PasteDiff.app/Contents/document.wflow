@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>346</string>
+	<string>419</string>
 	<key>AMApplicationVersion</key>
-	<string>2.3</string>
+	<string>2.6</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -44,8 +44,6 @@
 				<dict>
 					<key>Container</key>
 					<string>List</string>
-					<key>Optional</key>
-					<false/>
 					<key>Types</key>
 					<array>
 						<string>*</string>
@@ -113,9 +111,9 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>322.000000:1238.000000</string>
+				<string>388.000000:173.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/English.lproj/main.nib</string>
+				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -223,9 +221,9 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>322.000000:1135.000000</string>
+				<string>388.000000:279.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/Set Value of Variable.action/Contents/Resources/English.lproj/main.nib</string>
+				<string>/System/Library/Automator/Set Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -402,9 +400,9 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>322.000000:1030.000000</string>
+				<string>388.000000:461.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/Ask for Text.action/Contents/Resources/English.lproj/main.nib</string>
+				<string>/System/Library/Automator/Ask for Text.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -605,9 +603,9 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>322.000000:848.000000</string>
+				<string>388.000000:641.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/New Text File.action/Contents/Resources/English.lproj/main.nib</string>
+				<string>/System/Library/Automator/New Text File.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -784,9 +782,9 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>322.000000:668.000000</string>
+				<string>388.000000:823.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/Ask for Text.action/Contents/Resources/English.lproj/main.nib</string>
+				<string>/System/Library/Automator/Ask for Text.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -987,9 +985,9 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>322.000000:486.000000</string>
+				<string>388.000000:1003.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/New Text File.action/Contents/Resources/English.lproj/main.nib</string>
+				<string>/System/Library/Automator/New Text File.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -1028,11 +1026,9 @@
 				<dict>
 					<key>Container</key>
 					<string>List</string>
-					<key>Optional</key>
-					<true/>
 					<key>Types</key>
 					<array>
-						<string>com.apple.cocoa.string</string>
+						<string>*</string>
 					</array>
 				</dict>
 				<key>AMRequiredResources</key>
@@ -1097,9 +1093,9 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>322.000000:306.000000</string>
+				<string>388.000000:1106.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/English.lproj/main.nib</string>
+				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -1154,8 +1150,11 @@
 				<dict>
 					<key>COMMAND_STRING</key>
 					<string>(
-	diffmerge /tmp/diff.$2.base.txt /tmp/diff.$2.new.txt
-	rm /tmp/diff.$2.base.txt /tmp/diff.$2.new.txt
+    /usr/local/bin/diffmerge /tmp/diff.$2.base.txt /tmp/diff.$2.new.txt
+    if [ $? -eq 127 ]; then
+        osascript -e 'tell app "System Events" to display dialog "diffmerge command not found, please install diffmerge command line tools"';
+    fi
+    rm -rf /tmp/diff.$2.base.txt /tmp/diff.$2.new.txt
 ) &gt;/dev/null 2&gt;&amp;1&amp;</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
@@ -1192,6 +1191,8 @@
 				</array>
 				<key>OutputUUID</key>
 				<string>2914DF2E-71DD-48C9-A606-9FF464585D95</string>
+				<key>ShowWhenRun</key>
+				<false/>
 				<key>UUID</key>
 				<string>DD55971E-A61B-4A13-86AB-8638F482481C</string>
 				<key>UnlocalizedApplications</key>
@@ -1269,7 +1270,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>322.000000:203.000000</string>
+				<string>388.000000:1289.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -1279,54 +1280,54 @@
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>1CED37A4-DEDA-4185-B059-E5EAC86F76D0</key>
+		<key>0CAD5334-3D0B-4E10-B0F0-1CF8905C9933</key>
 		<dict>
 			<key>from</key>
 			<string>9170EECE-492D-4444-9A96-86E8CA638341 - 9170EECE-492D-4444-9A96-86E8CA638341</string>
 			<key>to</key>
 			<string>DD55971E-A61B-4A13-86AB-8638F482481C - DD55971E-A61B-4A13-86AB-8638F482481C</string>
 		</dict>
-		<key>32BD58F9-746C-4CFC-800C-557E4CAA5A13</key>
+		<key>10C6F739-662E-4EC1-911A-3727FF7CCA11</key>
+		<dict>
+			<key>from</key>
+			<string>13D964F0-F2DD-4ABB-83EB-C1F3B842F6CE - 13D964F0-F2DD-4ABB-83EB-C1F3B842F6CE</string>
+			<key>to</key>
+			<string>EE5F5350-1B59-4DD3-9115-65E6214B9BFA - EE5F5350-1B59-4DD3-9115-65E6214B9BFA</string>
+		</dict>
+		<key>4DFA3024-4435-45C6-8C05-7532D44F5D83</key>
 		<dict>
 			<key>from</key>
 			<string>EE5F5350-1B59-4DD3-9115-65E6214B9BFA - EE5F5350-1B59-4DD3-9115-65E6214B9BFA</string>
 			<key>to</key>
 			<string>12C3FAB8-F3B3-4E86-9430-2DF665CD4551 - 12C3FAB8-F3B3-4E86-9430-2DF665CD4551</string>
 		</dict>
-		<key>4EBB70D3-C2EA-40C5-B6BE-C28F8EC08C75</key>
-		<dict>
-			<key>from</key>
-			<string>B22F7298-B413-4FDF-AC39-03D1B74E1C35 - B22F7298-B413-4FDF-AC39-03D1B74E1C35</string>
-			<key>to</key>
-			<string>EF629881-B69F-4F96-87D6-3AB66C408962 - EF629881-B69F-4F96-87D6-3AB66C408962</string>
-		</dict>
-		<key>576ED0B0-E3D5-43CA-9630-156E3FBC4BCD</key>
-		<dict>
-			<key>from</key>
-			<string>12C3FAB8-F3B3-4E86-9430-2DF665CD4551 - 12C3FAB8-F3B3-4E86-9430-2DF665CD4551</string>
-			<key>to</key>
-			<string>54466522-CACA-45C3-B57F-1D1F20974783 - 54466522-CACA-45C3-B57F-1D1F20974783</string>
-		</dict>
-		<key>8BC499B6-9D19-4EB6-8FFB-6BAE5B201FB6</key>
-		<dict>
-			<key>from</key>
-			<string>54466522-CACA-45C3-B57F-1D1F20974783 - 54466522-CACA-45C3-B57F-1D1F20974783</string>
-			<key>to</key>
-			<string>B22F7298-B413-4FDF-AC39-03D1B74E1C35 - B22F7298-B413-4FDF-AC39-03D1B74E1C35</string>
-		</dict>
-		<key>D8923E5B-7DEF-4AEF-8377-072D587E3F99</key>
+		<key>5053BB23-A67E-4D57-A60B-8BB89CAED2B0</key>
 		<dict>
 			<key>from</key>
 			<string>EF629881-B69F-4F96-87D6-3AB66C408962 - EF629881-B69F-4F96-87D6-3AB66C408962</string>
 			<key>to</key>
 			<string>9170EECE-492D-4444-9A96-86E8CA638341 - 9170EECE-492D-4444-9A96-86E8CA638341</string>
 		</dict>
-		<key>F4CF97E1-8CC3-49B5-84CA-DCE178D4D495</key>
+		<key>A1F22745-D221-4D2C-8137-472D85E7C20F</key>
 		<dict>
 			<key>from</key>
-			<string>13D964F0-F2DD-4ABB-83EB-C1F3B842F6CE - 13D964F0-F2DD-4ABB-83EB-C1F3B842F6CE</string>
+			<string>B22F7298-B413-4FDF-AC39-03D1B74E1C35 - B22F7298-B413-4FDF-AC39-03D1B74E1C35</string>
 			<key>to</key>
-			<string>EE5F5350-1B59-4DD3-9115-65E6214B9BFA - EE5F5350-1B59-4DD3-9115-65E6214B9BFA</string>
+			<string>EF629881-B69F-4F96-87D6-3AB66C408962 - EF629881-B69F-4F96-87D6-3AB66C408962</string>
+		</dict>
+		<key>DB822966-3951-423A-B077-EE9306C089F5</key>
+		<dict>
+			<key>from</key>
+			<string>54466522-CACA-45C3-B57F-1D1F20974783 - 54466522-CACA-45C3-B57F-1D1F20974783</string>
+			<key>to</key>
+			<string>B22F7298-B413-4FDF-AC39-03D1B74E1C35 - B22F7298-B413-4FDF-AC39-03D1B74E1C35</string>
+		</dict>
+		<key>F4D153D4-4C85-45FC-A6AF-B7FA9053CD3F</key>
+		<dict>
+			<key>from</key>
+			<string>12C3FAB8-F3B3-4E86-9430-2DF665CD4551 - 12C3FAB8-F3B3-4E86-9430-2DF665CD4551</string>
+			<key>to</key>
+			<string>54466522-CACA-45C3-B57F-1D1F20974783 - 54466522-CACA-45C3-B57F-1D1F20974783</string>
 		</dict>
 	</dict>
 	<key>variables</key>
