@@ -478,7 +478,7 @@
 					<key>newFileName</key>
 					<string>diff.$(0716E9F1-CD59-4925-8A12-2E6CB8C49463).unidiff.txt</string>
 					<key>newFileTextEncoding</key>
-					<integer>30</integer>
+					<integer>4</integer>
 					<key>replaceExistingFiles</key>
 					<integer>0</integer>
 					<key>textFormat</key>
@@ -897,40 +897,40 @@
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>00EB8982-8B70-4336-B535-AF6558F9828E</key>
+		<key>06F5EB98-E30A-46C7-B287-14C0BCBE604D</key>
 		<dict>
 			<key>from</key>
-			<string>54466522-CACA-45C3-B57F-1D1F20974783 - 54466522-CACA-45C3-B57F-1D1F20974783</string>
+			<string>12C3FAB8-F3B3-4E86-9430-2DF665CD4551 - 12C3FAB8-F3B3-4E86-9430-2DF665CD4551</string>
 			<key>to</key>
-			<string>9170EECE-492D-4444-9A96-86E8CA638341 - 9170EECE-492D-4444-9A96-86E8CA638341</string>
+			<string>54466522-CACA-45C3-B57F-1D1F20974783 - 54466522-CACA-45C3-B57F-1D1F20974783</string>
 		</dict>
-		<key>793B1EB2-AFB9-4AA2-9C85-06BE51A815DF</key>
+		<key>1AD808DD-187E-4B0B-8A95-686278351A0C</key>
+		<dict>
+			<key>from</key>
+			<string>9170EECE-492D-4444-9A96-86E8CA638341 - 9170EECE-492D-4444-9A96-86E8CA638341</string>
+			<key>to</key>
+			<string>DD55971E-A61B-4A13-86AB-8638F482481C - DD55971E-A61B-4A13-86AB-8638F482481C</string>
+		</dict>
+		<key>343BBFDD-C009-4356-A86A-98BA0E9F73A1</key>
 		<dict>
 			<key>from</key>
 			<string>13D964F0-F2DD-4ABB-83EB-C1F3B842F6CE - 13D964F0-F2DD-4ABB-83EB-C1F3B842F6CE</string>
 			<key>to</key>
 			<string>EE5F5350-1B59-4DD3-9115-65E6214B9BFA - EE5F5350-1B59-4DD3-9115-65E6214B9BFA</string>
 		</dict>
-		<key>C9FAB042-16AA-4C73-80F2-FEDD16463DC3</key>
+		<key>95120B72-93AD-430D-894F-94A777156E70</key>
+		<dict>
+			<key>from</key>
+			<string>54466522-CACA-45C3-B57F-1D1F20974783 - 54466522-CACA-45C3-B57F-1D1F20974783</string>
+			<key>to</key>
+			<string>9170EECE-492D-4444-9A96-86E8CA638341 - 9170EECE-492D-4444-9A96-86E8CA638341</string>
+		</dict>
+		<key>F8296470-C633-461A-A8D0-1A07C485AE2E</key>
 		<dict>
 			<key>from</key>
 			<string>EE5F5350-1B59-4DD3-9115-65E6214B9BFA - EE5F5350-1B59-4DD3-9115-65E6214B9BFA</string>
 			<key>to</key>
 			<string>12C3FAB8-F3B3-4E86-9430-2DF665CD4551 - 12C3FAB8-F3B3-4E86-9430-2DF665CD4551</string>
-		</dict>
-		<key>CE4DA4C8-E8E0-411F-9478-F321E98D77B7</key>
-		<dict>
-			<key>from</key>
-			<string>12C3FAB8-F3B3-4E86-9430-2DF665CD4551 - 12C3FAB8-F3B3-4E86-9430-2DF665CD4551</string>
-			<key>to</key>
-			<string>54466522-CACA-45C3-B57F-1D1F20974783 - 54466522-CACA-45C3-B57F-1D1F20974783</string>
-		</dict>
-		<key>D96EA988-1B7C-4067-8CC6-49994C2A6796</key>
-		<dict>
-			<key>from</key>
-			<string>9170EECE-492D-4444-9A96-86E8CA638341 - 9170EECE-492D-4444-9A96-86E8CA638341</string>
-			<key>to</key>
-			<string>DD55971E-A61B-4A13-86AB-8638F482481C - DD55971E-A61B-4A13-86AB-8638F482481C</string>
 		</dict>
 	</dict>
 	<key>variables</key>
